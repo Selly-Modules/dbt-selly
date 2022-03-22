@@ -1,0 +1,1 @@
+{"ssl":false,"host":"localhost","port":5555,"schema":"public","database":"selly_etl","password":"123","username":"selly","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}

@@ -1,0 +1,39 @@
+version: 2
+sources:
+- name: unibag
+  quoting:
+    database: true
+    schema: false
+    identifier: false
+  tables:
+  - name: _airbyte_raw_admin_tags
+  - name: _airbyte_raw_cash_flows
+  - name: _airbyte_raw_cities
+  - name: _airbyte_raw_customers
+  - name: _airbyte_raw_districts
+  - name: _airbyte_raw_event_rewards
+  - name: _airbyte_raw_events
+  - name: _airbyte_raw_inventories
+  - name: _airbyte_raw_membership
+  - name: _airbyte_raw_membership_histories
+  - name: _airbyte_raw_membership_orders
+  - name: _airbyte_raw_order_deliveries
+  - name: _airbyte_raw_order_histories
+  - name: _airbyte_raw_order_items
+  - name: _airbyte_raw_orders
+  - name: _airbyte_raw_product_categories
+  - name: _airbyte_raw_product_sku
+  - name: _airbyte_raw_product_sku_versions
+  - name: _airbyte_raw_product_sub_categories
+  - name: _airbyte_raw_products
+  - name: _airbyte_raw_promotion_orders
+  - name: _airbyte_raw_promotions
+  - name: _airbyte_raw_referrals
+  - name: _airbyte_raw_suppliers
+  - name: _airbyte_raw_team_activities
+  - name: _airbyte_raw_team_bonus
+  - name: _airbyte_raw_team_members
+  - name: _airbyte_raw_teams
+  - name: _airbyte_raw_user_identifications
+  - name: _airbyte_raw_users
+  - name: _airbyte_raw_wards
