@@ -24,6 +24,7 @@ select
         'trackingtime',
         boolean_to_string('isadminchange'),
         'trackingordercode',
+        'weight',
     ]) }} as _airbyte_order_deliveries_hashid,
     tmp.*
 from {{ ref('order_deliveries_ab2') }} tmp

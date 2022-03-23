@@ -23,6 +23,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['trackingTime'], ['trackingTime']) }} as trackingtime,
     {{ json_extract_scalar('_airbyte_data', ['isAdminChange'], ['isAdminChange']) }} as isadminchange,
     {{ json_extract_scalar('_airbyte_data', ['trackingOrderCode'], ['trackingOrderCode']) }} as trackingordercode,
+    {{ json_extract_scalar('_airbyte_data', ['weight'], ['weight']) }} as weight,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

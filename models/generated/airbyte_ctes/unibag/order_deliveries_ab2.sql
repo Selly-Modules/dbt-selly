@@ -23,6 +23,7 @@ select
     cast(trackingtime as {{ dbt_utils.type_string() }}) as trackingtime,
     {{ cast_to_boolean('isadminchange') }} as isadminchange,
     cast(trackingordercode as {{ dbt_utils.type_string() }}) as trackingordercode,
+    cast(weight as {{ dbt_utils.type_string() }}) as weight,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at
