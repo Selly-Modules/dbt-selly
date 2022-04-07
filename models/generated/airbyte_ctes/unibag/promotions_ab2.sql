@@ -25,6 +25,7 @@ select
     cast(conditionforuser as {{ dbt_utils.type_string() }}) as conditionforuser,
     {{ cast_to_boolean('isunlimitedquantity') }} as isunlimitedquantity,
     {{ cast_to_boolean('isapplyfororderwholesale') }} as isapplyfororderwholesale,
+    cast(supplierCommission as {{ dbt_utils.type_string() }}) as supplierCommission,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

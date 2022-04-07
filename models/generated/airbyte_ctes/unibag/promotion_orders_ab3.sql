@@ -21,6 +21,8 @@ select
         'commission',
         boolean_to_string('isrejected'),
         'quantitypromotion',
+        'supplierCommission',
+        'supplierCommissionTotal',
     ]) }} as _airbyte_promotion_orders_hashid,
     tmp.*
 from {{ ref('promotion_orders_ab2') }} tmp

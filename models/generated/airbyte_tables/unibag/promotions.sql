@@ -22,6 +22,8 @@ select
     cast({{ adapter.quote('options') }}::json->'bonus'->>'value' AS numeric) AS options_bonus_value,
     {{ adapter.quote('conditionforuser') }}::json->>'applyFor' AS condition_for_user_apply_for,
     {{ adapter.quote('conditionforuser') }}::json->>'gender' AS condition_for_user_gender,
+    {{ adapter.quote('suppliercommission') }}::json->>'type' AS supplier_commission_type,
+    cast({{ adapter.quote('suppliercommission') }}::json->>'value' AS numeric) AS supplier_commission_value,
     articleid AS article_id,
     isapplyfororderwholesale AS is_apply_for_order_wholesale,
     createdat::timestamp AS created_at,

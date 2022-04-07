@@ -25,6 +25,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['conditionForUser'], ['conditionForUser']) }} as conditionforuser,
     {{ json_extract_scalar('_airbyte_data', ['isUnlimitedQuantity'], ['isUnlimitedQuantity']) }} as isunlimitedquantity,
     {{ json_extract_scalar('_airbyte_data', ['isApplyForOrderWholesale'], ['isApplyForOrderWholesale']) }} as isapplyfororderwholesale,
+    {{ json_extract_scalar('_airbyte_data', ['supplierCommission'], ['supplierCommission']) }} as suppliercommission,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

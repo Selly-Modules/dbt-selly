@@ -26,6 +26,7 @@ select
         'conditionforuser',
         boolean_to_string('isunlimitedquantity'),
         boolean_to_string('isapplyfororderwholesale'),
+        'supplierCommission',
     ]) }} as _airbyte_promotions_hashid,
     tmp.*
 from {{ ref('promotions_ab2') }} tmp

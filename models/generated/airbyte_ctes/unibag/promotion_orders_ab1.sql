@@ -20,6 +20,8 @@ select
     {{ json_extract_scalar('_airbyte_data', ['commission'], ['commission']) }} as commission,
     {{ json_extract_scalar('_airbyte_data', ['isRejected'], ['isRejected']) }} as isrejected,
     {{ json_extract_scalar('_airbyte_data', ['quantityPromotion'], ['quantityPromotion']) }} as quantitypromotion,
+    {{ json_extract_scalar('_airbyte_data', ['supplierCommission'], ['supplierCommission']) }} as suppliercommission,
+    {{ json_extract_scalar('_airbyte_data', ['supplierCommissionTotal'], ['supplierCommissionTotal']) }} as suppliercommissiontotal,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

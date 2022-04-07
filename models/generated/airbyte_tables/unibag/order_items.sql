@@ -27,6 +27,7 @@ select
     {{ adapter.quote('user') }} AS seller_id,
     {{ adapter.quote('order') }} AS order_id,
     {{ adapter.quote('product') }} AS product_id,
+    cast({{ adapter.quote('promotions') }} AS jsonb) AS promotions,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at,

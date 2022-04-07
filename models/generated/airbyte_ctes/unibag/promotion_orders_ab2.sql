@@ -20,6 +20,8 @@ select
     cast(commission as {{ dbt_utils.type_float() }}) as commission,
     {{ cast_to_boolean('isrejected') }} as isrejected,
     cast(quantitypromotion as {{ dbt_utils.type_float() }}) as quantitypromotion,
+    cast(supplierCommission as {{ dbt_utils.type_string() }}) as supplierCommission,
+    cast(supplierCommissionTotal as {{ dbt_utils.type_float() }}) as supplierCommissionTotal,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at
