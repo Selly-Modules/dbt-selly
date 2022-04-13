@@ -29,11 +29,14 @@ sources:
   - name: _airbyte_raw_promotion_orders
   - name: _airbyte_raw_promotions
   - name: _airbyte_raw_referrals
+  - name: _airbyte_raw_social_post_views
+  - name: _airbyte_raw_social_posts
   - name: _airbyte_raw_suppliers
   - name: _airbyte_raw_team_activities
   - name: _airbyte_raw_team_bonus
   - name: _airbyte_raw_team_members
   - name: _airbyte_raw_teams
+  - name: _airbyte_raw_tracking_product_shares
   - name: _airbyte_raw_user_identifications
   - name: _airbyte_raw_users
   - name: _airbyte_raw_wards

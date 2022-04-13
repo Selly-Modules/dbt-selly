@@ -6,10 +6,10 @@ config:
 normalize:
   outputs:
     prod:
-      dbname: selly_etl
-      host: localhost
-      pass: '123'
-      port: 5555
+      dbname: mongo_etl
+      host: 18.140.112.89
+      pass: bvxJaDGW2R55uyDXfODJ2a0Y
+      port: 5432
       schema: public
       threads: 8
       type: postgres

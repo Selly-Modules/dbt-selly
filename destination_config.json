@@ -1,1 +1,1 @@
-{"ssl":false,"host":"localhost","port":5555,"schema":"public","database":"selly_etl","password":"123","username":"selly","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}
+{"ssl":false,"host":"18.140.112.89","port":5432,"schema":"public","database":"mongo_etl","password":"bvxJaDGW2R55uyDXfODJ2a0Y","username":"selly","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}
