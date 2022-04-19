@@ -20,4 +20,3 @@ select
 from {{ ref('tracking_product_shares_ab3') }}
 -- tracking_product_shares from {{ source('unibag', '_airbyte_raw_tracking_product_shares') }}
 where 1 = 1
-
