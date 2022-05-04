@@ -1,45 +1,29 @@
-# This file is necessary to install dbt-utils with dbt deps
-# the content will be overwritten by the transform function
-
-# Name your package! Package names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
-name: "airbyte_utils"
-version: "1.0"
+name: airbyte_utils
+version: '1.0'
 config-version: 2
-
-# This setting configures which "profile" dbt uses for this project. Profiles contain
-# database connection information, and should be configured in the  ~/.dbt/profiles.yml file
-profile: "normalize"
-
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that source models can be found
-# in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
-docs-paths: ["docs"]
-analysis-paths: ["analysis"]
-test-paths: ["tests"]
-seed-paths: ["data"]
-macro-paths: ["macros"]
-
-target-path: "../build" # directory which will store compiled SQL files
-log-path: "../logs" # directory which will store DBT logs
-packages-install-path: "../dbt" # directory which will store external DBT dependencies
-
-clean-targets: # directories to be removed by `dbt clean`
-  - "build"
-  - "dbt_modules"
-
+profile: normalize
+model-paths:
+- models
+docs-paths:
+- docs
+analysis-paths:
+- analysis
+test-paths:
+- tests
+seed-paths:
+- data
+macro-paths:
+- macros
+target-path: ../build
+log-path: ../logs
+packages-install-path: ../dbt
+clean-targets:
+- build
+- dbt_modules
 quoting:
   database: true
-  # Temporarily disabling the behavior of the ExtendedNameTransformer on table/schema names, see (issue #1785)
-  # all schemas should be unquoted
   schema: false
   identifier: true
-
-# You can define configurations for models in the `model-paths` directory here.
-# Using these configurations, you can enable or disable models, change how they
-# are materialized, and more!
 models:
   airbyte_utils:
     +materialized: table
@@ -57,7 +41,151 @@ models:
       airbyte_views:
         +tags: airbyte_internal_views
         +materialized: view
-
 dispatch:
-  - macro_namespace: dbt_utils
-    search_order: ["airbyte_utils", "dbt_utils"]
+- macro_namespace: dbt_utils
+  search_order:
+  - airbyte_utils
+  - dbt_utils
+vars:
+  json_column: _airbyte_data
+  models_to_source:
+    admin_tags_ab1: unibag._airbyte_raw_admin_tags
+    admin_tags_ab2: unibag._airbyte_raw_admin_tags
+    admin_tags_ab3: unibag._airbyte_raw_admin_tags
+    admin_tags: unibag._airbyte_raw_admin_tags
+    cash_flows_ab1: unibag._airbyte_raw_cash_flows
+    cash_flows_ab2: unibag._airbyte_raw_cash_flows
+    cash_flows_ab3: unibag._airbyte_raw_cash_flows
+    cash_flows: unibag._airbyte_raw_cash_flows
+    cities_ab1: unibag._airbyte_raw_cities
+    cities_ab2: unibag._airbyte_raw_cities
+    cities_ab3: unibag._airbyte_raw_cities
+    cities: unibag._airbyte_raw_cities
+    customers_ab1: unibag._airbyte_raw_customers
+    customers_ab2: unibag._airbyte_raw_customers
+    customers_ab3: unibag._airbyte_raw_customers
+    customers: unibag._airbyte_raw_customers
+    districts_ab1: unibag._airbyte_raw_districts
+    districts_ab2: unibag._airbyte_raw_districts
+    districts_ab3: unibag._airbyte_raw_districts
+    districts: unibag._airbyte_raw_districts
+    event_rewards_ab1: unibag._airbyte_raw_event_rewards
+    event_rewards_ab2: unibag._airbyte_raw_event_rewards
+    event_rewards_ab3: unibag._airbyte_raw_event_rewards
+    event_rewards: unibag._airbyte_raw_event_rewards
+    events_ab1: unibag._airbyte_raw_events
+    events_ab2: unibag._airbyte_raw_events
+    events_ab3: unibag._airbyte_raw_events
+    events: unibag._airbyte_raw_events
+    inventories_ab1: unibag._airbyte_raw_inventories
+    inventories_ab2: unibag._airbyte_raw_inventories
+    inventories_ab3: unibag._airbyte_raw_inventories
+    inventories: unibag._airbyte_raw_inventories
+    membership_ab1: unibag._airbyte_raw_membership
+    membership_ab2: unibag._airbyte_raw_membership
+    membership_ab3: unibag._airbyte_raw_membership
+    membership: unibag._airbyte_raw_membership
+    membership_histories_ab1: unibag._airbyte_raw_membership_histories
+    membership_histories_ab2: unibag._airbyte_raw_membership_histories
+    membership_histories_ab3: unibag._airbyte_raw_membership_histories
+    membership_histories: unibag._airbyte_raw_membership_histories
+    membership_orders_ab1: unibag._airbyte_raw_membership_orders
+    membership_orders_ab2: unibag._airbyte_raw_membership_orders
+    membership_orders_ab3: unibag._airbyte_raw_membership_orders
+    membership_orders: unibag._airbyte_raw_membership_orders
+    order_deliveries_ab1: unibag._airbyte_raw_order_deliveries
+    order_deliveries_ab2: unibag._airbyte_raw_order_deliveries
+    order_deliveries_ab3: unibag._airbyte_raw_order_deliveries
+    order_deliveries: unibag._airbyte_raw_order_deliveries
+    order_histories_ab1: unibag._airbyte_raw_order_histories
+    order_histories_ab2: unibag._airbyte_raw_order_histories
+    order_histories_ab3: unibag._airbyte_raw_order_histories
+    order_histories: unibag._airbyte_raw_order_histories
+    order_items_ab1: unibag._airbyte_raw_order_items
+    order_items_ab2: unibag._airbyte_raw_order_items
+    order_items_ab3: unibag._airbyte_raw_order_items
+    order_items: unibag._airbyte_raw_order_items
+    orders_ab1: unibag._airbyte_raw_orders
+    orders_ab2: unibag._airbyte_raw_orders
+    orders_ab3: unibag._airbyte_raw_orders
+    orders: unibag._airbyte_raw_orders
+    product_categories_ab1: unibag._airbyte_raw_product_categories
+    product_categories_ab2: unibag._airbyte_raw_product_categories
+    product_categories_ab3: unibag._airbyte_raw_product_categories
+    product_categories: unibag._airbyte_raw_product_categories
+    product_sku_ab1: unibag._airbyte_raw_product_sku
+    product_sku_ab2: unibag._airbyte_raw_product_sku
+    product_sku_ab3: unibag._airbyte_raw_product_sku
+    product_sku: unibag._airbyte_raw_product_sku
+    product_sku_versions_ab1: unibag._airbyte_raw_product_sku_versions
+    product_sku_versions_ab2: unibag._airbyte_raw_product_sku_versions
+    product_sku_versions_ab3: unibag._airbyte_raw_product_sku_versions
+    product_sku_versions: unibag._airbyte_raw_product_sku_versions
+    product_sub_categories_ab1: unibag._airbyte_raw_product_sub_categories
+    product_sub_categories_ab2: unibag._airbyte_raw_product_sub_categories
+    product_sub_categories_ab3: unibag._airbyte_raw_product_sub_categories
+    product_sub_categories: unibag._airbyte_raw_product_sub_categories
+    products_ab1: unibag._airbyte_raw_products
+    products_ab2: unibag._airbyte_raw_products
+    products_ab3: unibag._airbyte_raw_products
+    products: unibag._airbyte_raw_products
+    promotion_orders_ab1: unibag._airbyte_raw_promotion_orders
+    promotion_orders_ab2: unibag._airbyte_raw_promotion_orders
+    promotion_orders_ab3: unibag._airbyte_raw_promotion_orders
+    promotion_orders: unibag._airbyte_raw_promotion_orders
+    promotions_ab1: unibag._airbyte_raw_promotions
+    promotions_ab2: unibag._airbyte_raw_promotions
+    promotions_ab3: unibag._airbyte_raw_promotions
+    promotions: unibag._airbyte_raw_promotions
+    referrals_ab1: unibag._airbyte_raw_referrals
+    referrals_ab2: unibag._airbyte_raw_referrals
+    referrals_ab3: unibag._airbyte_raw_referrals
+    referrals: unibag._airbyte_raw_referrals
+    social_post_views_ab1: unibag._airbyte_raw_social_post_views
+    social_post_views_ab2: unibag._airbyte_raw_social_post_views
+    social_post_views_ab3: unibag._airbyte_raw_social_post_views
+    social_post_views: unibag._airbyte_raw_social_post_views
+    social_posts_ab1: unibag._airbyte_raw_social_posts
+    social_posts_ab2: unibag._airbyte_raw_social_posts
+    social_posts_ab3: unibag._airbyte_raw_social_posts
+    social_posts: unibag._airbyte_raw_social_posts
+    suppliers_ab1: unibag._airbyte_raw_suppliers
+    suppliers_ab2: unibag._airbyte_raw_suppliers
+    suppliers_ab3: unibag._airbyte_raw_suppliers
+    suppliers: unibag._airbyte_raw_suppliers
+    team_activities_ab1: unibag._airbyte_raw_team_activities
+    team_activities_ab2: unibag._airbyte_raw_team_activities
+    team_activities_ab3: unibag._airbyte_raw_team_activities
+    team_activities: unibag._airbyte_raw_team_activities
+    team_bonus_ab1: unibag._airbyte_raw_team_bonus
+    team_bonus_ab2: unibag._airbyte_raw_team_bonus
+    team_bonus_ab3: unibag._airbyte_raw_team_bonus
+    team_bonus: unibag._airbyte_raw_team_bonus
+    team_members_ab1: unibag._airbyte_raw_team_members
+    team_members_ab2: unibag._airbyte_raw_team_members
+    team_members_ab3: unibag._airbyte_raw_team_members
+    team_members: unibag._airbyte_raw_team_members
+    teams_ab1: unibag._airbyte_raw_teams
+    teams_ab2: unibag._airbyte_raw_teams
+    teams_ab3: unibag._airbyte_raw_teams
+    teams: unibag._airbyte_raw_teams
+    user_identifications_ab1: unibag._airbyte_raw_user_identifications
+    user_identifications_ab2: unibag._airbyte_raw_user_identifications
+    user_identifications_ab3: unibag._airbyte_raw_user_identifications
+    user_identifications: unibag._airbyte_raw_user_identifications
+    users_ab1: unibag._airbyte_raw_users
+    users_ab2: unibag._airbyte_raw_users
+    users_ab3: unibag._airbyte_raw_users
+    users: unibag._airbyte_raw_users
+    voucher_bonus_ab1: unibag._airbyte_raw_voucher_bonus
+    voucher_bonus_ab2: unibag._airbyte_raw_voucher_bonus
+    voucher_bonus_ab3: unibag._airbyte_raw_voucher_bonus
+    voucher_bonus: unibag._airbyte_raw_voucher_bonus
+    vouchers_ab1: unibag._airbyte_raw_vouchers
+    vouchers_ab2: unibag._airbyte_raw_vouchers
+    vouchers_ab3: unibag._airbyte_raw_vouchers
+    vouchers: unibag._airbyte_raw_vouchers
+    wards_ab1: unibag._airbyte_raw_wards
+    wards_ab2: unibag._airbyte_raw_wards
+    wards_ab3: unibag._airbyte_raw_wards
+    wards: unibag._airbyte_raw_wards
