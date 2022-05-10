@@ -14,7 +14,7 @@ select
         adapter.quote('user'),
         adapter.quote('event'),
         'status',
-        adapter.quote('options'),
+        object_to_string(adapter.quote('options')),
         'createdat',
         'updatedat',
     ]) }} as _airbyte_event_rewards_hashid,

@@ -9,8 +9,8 @@
 select
     {{ dbt_utils.surrogate_key([
         '_id',
-        adapter.quote('new'),
-        adapter.quote('old'),
+        object_to_string(adapter.quote('new')),
+        object_to_string(adapter.quote('old')),
         adapter.quote('type'),
         adapter.quote('user'),
         'createdat',

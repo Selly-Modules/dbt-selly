@@ -13,7 +13,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['user'], ['user']) }} as {{ adapter.quote('user') }},
     {{ json_extract_scalar('_airbyte_data', ['event'], ['event']) }} as {{ adapter.quote('event') }},
     {{ json_extract_scalar('_airbyte_data', ['status'], ['status']) }} as status,
-    {{ json_extract_scalar('_airbyte_data', ['options'], ['options']) }} as {{ adapter.quote('options') }},
+    {{ json_extract('table_alias', '_airbyte_data', ['options'], ['options']) }} as {{ adapter.quote('options') }},
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,
     {{ json_extract_scalar('_airbyte_data', ['updatedat'], ['updatedat']) }} as updatedat,
     _airbyte_ab_id,

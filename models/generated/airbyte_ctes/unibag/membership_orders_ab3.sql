@@ -19,7 +19,6 @@ select
         boolean_to_string('isrejected'),
         'membershipname',
         'membershiplevel',
-        'membershippromotion'
     ]) }} as _airbyte_membership_orders_hashid,
     tmp.*
 from {{ ref('membership_orders_ab2') }} tmp

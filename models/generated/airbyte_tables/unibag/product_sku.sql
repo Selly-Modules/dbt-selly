@@ -24,6 +24,7 @@ select
     {{ adapter.quote('info') }}::json->'supplier'->>'name' AS supplier_name,
     {{ adapter.quote('info') }}::json->>'dimension' AS info_dimension,
     unitCode AS info_unit_code,
+    supplierSku AS supplier_sku,
     cast({{ adapter.quote('info') }}::json->>'weight' AS numeric) AS info_weight,
     cast({{ adapter.quote('statistic') }}::json->>'saleTotal' AS numeric) AS stats_sale_total,
     cast({{ adapter.quote('statistic') }}::json->>'salePending' AS numeric) AS stats_sale_pending,

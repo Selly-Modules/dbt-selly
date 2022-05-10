@@ -13,16 +13,15 @@ select
         adapter.quote('order'),
         'title',
         'status',
-        'supplier',
+        object_to_string('supplier'),
         'createdat',
         'promotion',
         'updatedat',
         'cashbackat',
         'commission',
         boolean_to_string('isrejected'),
+        'orderpricetotal',
         'quantitypromotion',
-        'supplierCommission',
-        'supplierCommissionTotal',
     ]) }} as _airbyte_promotion_orders_hashid,
     tmp.*
 from {{ ref('promotion_orders_ab2') }} tmp

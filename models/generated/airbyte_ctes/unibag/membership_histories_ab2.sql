@@ -8,8 +8,8 @@
 -- depends_on: {{ ref('membership_histories_ab1') }}
 select
     cast(_id as {{ dbt_utils.type_string() }}) as _id,
-    cast({{ adapter.quote('new') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('new') }},
-    cast({{ adapter.quote('old') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('old') }},
+    cast({{ adapter.quote('new') }} as {{ type_json() }}) as {{ adapter.quote('new') }},
+    cast({{ adapter.quote('old') }} as {{ type_json() }}) as {{ adapter.quote('old') }},
     cast({{ adapter.quote('type') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('type') }},
     cast({{ adapter.quote('user') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('user') }},
     cast(createdat as {{ dbt_utils.type_string() }}) as createdat,

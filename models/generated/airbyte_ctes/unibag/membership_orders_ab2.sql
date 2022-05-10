@@ -18,7 +18,6 @@ select
     {{ cast_to_boolean('isrejected') }} as isrejected,
     cast(membershipname as {{ dbt_utils.type_string() }}) as membershipname,
     cast(membershiplevel as {{ dbt_utils.type_float() }}) as membershiplevel,
-    cast({{ adapter.quote('membershippromotion') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('membershippromotion') }},
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

@@ -11,7 +11,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['order'], ['order']) }} as {{ adapter.quote('order') }},
     {{ json_extract_scalar('_airbyte_data', ['status'], ['status']) }} as status,
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,
-    {{ json_extract_scalar('_airbyte_data', ['timestamp'], ['timestamp']) }} as {{ adapter.quote('timestamp') }},
+    {{ json_extract_scalar('_airbyte_data', ['timeStamp'], ['timeStamp']) }} as {{ adapter.quote('timeStamp') }},
     {{ json_extract_scalar('_airbyte_data', ['updatedAt'], ['updatedAt']) }} as updatedat,
     _airbyte_ab_id,
     _airbyte_emitted_at,

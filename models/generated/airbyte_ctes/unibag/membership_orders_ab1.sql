@@ -18,7 +18,6 @@ select
     {{ json_extract_scalar('_airbyte_data', ['isRejected'], ['isRejected']) }} as isrejected,
     {{ json_extract_scalar('_airbyte_data', ['membershipName'], ['membershipName']) }} as membershipname,
     {{ json_extract_scalar('_airbyte_data', ['membershipLevel'], ['membershipLevel']) }} as membershiplevel,
-    {{ json_extract_scalar('_airbyte_data', ['membershipPromotion'], ['membershipPromotion']) }} as membershippromotion,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

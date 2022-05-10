@@ -6,5 +6,5 @@ push:
 run:
 	dbt deps --profiles-dir=. --project-dir=.
     #dbt run --profiles-dir=. --project-dir=. --full-refresh
-	dbt run --profiles-dir=. --project-dir=. --full-refresh --select tracking_product_shares
+	dbt run --profiles-dir=. --project-dir=. --full-refresh --select session_deliveries
 

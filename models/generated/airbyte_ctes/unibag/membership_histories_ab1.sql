@@ -8,8 +8,8 @@
 -- depends_on: {{ source('unibag', '_airbyte_raw_membership_histories') }}
 select
     {{ json_extract_scalar('_airbyte_data', ['_id'], ['_id']) }} as _id,
-    {{ json_extract_scalar('_airbyte_data', ['new'], ['new']) }} as {{ adapter.quote('new') }},
-    {{ json_extract_scalar('_airbyte_data', ['old'], ['old']) }} as {{ adapter.quote('old') }},
+    {{ json_extract('table_alias', '_airbyte_data', ['new'], ['new']) }} as {{ adapter.quote('new') }},
+    {{ json_extract('table_alias', '_airbyte_data', ['old'], ['old']) }} as {{ adapter.quote('old') }},
     {{ json_extract_scalar('_airbyte_data', ['type'], ['type']) }} as {{ adapter.quote('type') }},
     {{ json_extract_scalar('_airbyte_data', ['user'], ['user']) }} as {{ adapter.quote('user') }},
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,

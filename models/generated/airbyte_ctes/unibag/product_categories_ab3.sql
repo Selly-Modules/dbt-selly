@@ -9,7 +9,7 @@
 select
     {{ dbt_utils.surrogate_key([
         '_id',
-        'icon',
+        object_to_string('icon'),
         adapter.quote('name'),
         'color',
         adapter.quote('order'),
@@ -17,6 +17,7 @@ select
         array_to_string('covers'),
         boolean_to_string('featured'),
         'createdat',
+        object_to_string('statistic'),
         'updatedat',
         'totalproduct',
     ]) }} as _airbyte_product_categories_hashid,
