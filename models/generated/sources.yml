@@ -29,6 +29,7 @@ sources:
   - name: _airbyte_raw_promotion_orders
   - name: _airbyte_raw_promotions
   - name: _airbyte_raw_referrals
+  - name: _airbyte_raw_session_deliveries
   - name: _airbyte_raw_social_post_views
   - name: _airbyte_raw_social_posts
   - name: _airbyte_raw_suppliers
