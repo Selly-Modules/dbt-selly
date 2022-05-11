@@ -11,7 +11,7 @@ select
     cast({{ adapter.quote('order') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('order') }},
     cast(status as {{ dbt_utils.type_string() }}) as status,
     cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
-    cast({{ adapter.quote('timeStamp') }} as {{ dbt_utils.type_float() }}) as {{ adapter.quote('timeStamp') }},
+    cast({{ adapter.quote('timestamp') }} as {{ dbt_utils.type_float() }}) as {{ adapter.quote('timestamp') }},
     cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
     _airbyte_ab_id,
     _airbyte_emitted_at,

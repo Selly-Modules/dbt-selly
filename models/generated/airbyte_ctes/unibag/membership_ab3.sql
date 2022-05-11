@@ -17,8 +17,10 @@ select
         boolean_to_string('active'),
         'createdat',
         'updatedat',
+        'updatedat_1',
         adapter.quote('transaction'),
         'bonuspercent',
+        'bonuspercent_1',
         'transactionminvalue',
     ]) }} as _airbyte_membership_hashid,
     tmp.*

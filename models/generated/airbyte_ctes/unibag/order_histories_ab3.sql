@@ -12,7 +12,7 @@ select
         adapter.quote('order'),
         'status',
         'createdat',
-        adapter.quote('timeStamp'),
+        adapter.quote('timestamp'),
         'updatedat',
     ]) }} as _airbyte_order_histories_hashid,
     tmp.*

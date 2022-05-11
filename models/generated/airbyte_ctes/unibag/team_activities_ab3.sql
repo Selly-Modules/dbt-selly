@@ -11,7 +11,7 @@ select
         '_id',
         'team',
         adapter.quote('action'),
-        object_to_string(adapter.quote('options')),
+        adapter.quote('options'),
         'targetid',
         'createdat',
         'createdby',

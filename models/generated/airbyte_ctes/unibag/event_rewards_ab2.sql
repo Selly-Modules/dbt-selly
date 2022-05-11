@@ -13,7 +13,7 @@ select
     cast({{ adapter.quote('user') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('user') }},
     cast({{ adapter.quote('event') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('event') }},
     cast(status as {{ dbt_utils.type_string() }}) as status,
-    cast({{ adapter.quote('options') }} as {{ type_json() }}) as {{ adapter.quote('options') }},
+    cast({{ adapter.quote('options') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('options') }},
     cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
     cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
     _airbyte_ab_id,

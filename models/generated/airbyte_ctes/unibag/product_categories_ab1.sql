@@ -8,7 +8,7 @@
 -- depends_on: {{ source('unibag', '_airbyte_raw_product_categories') }}
 select
     {{ json_extract_scalar('_airbyte_data', ['_id'], ['_id']) }} as _id,
-    {{ json_extract('table_alias', '_airbyte_data', ['icon'], ['icon']) }} as icon,
+    {{ json_extract_scalar('_airbyte_data', ['icon'], ['icon']) }} as icon,
     {{ json_extract_scalar('_airbyte_data', ['name'], ['name']) }} as {{ adapter.quote('name') }},
     {{ json_extract_scalar('_airbyte_data', ['color'], ['color']) }} as color,
     {{ json_extract_scalar('_airbyte_data', ['order'], ['order']) }} as {{ adapter.quote('order') }},
@@ -16,7 +16,6 @@ select
     {{ json_extract_array('_airbyte_data', ['covers'], ['covers']) }} as covers,
     {{ json_extract_scalar('_airbyte_data', ['featured'], ['featured']) }} as featured,
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,
-    {{ json_extract('table_alias', '_airbyte_data', ['statistic'], ['statistic']) }} as statistic,
     {{ json_extract_scalar('_airbyte_data', ['updatedAt'], ['updatedAt']) }} as updatedat,
     {{ json_extract_scalar('_airbyte_data', ['totalProduct'], ['totalProduct']) }} as totalproduct,
     _airbyte_ab_id,

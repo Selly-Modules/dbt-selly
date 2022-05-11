@@ -13,7 +13,7 @@ select
         adapter.quote('user'),
         adapter.quote('value'),
         adapter.quote('action'),
-        object_to_string(adapter.quote('options')),
+        adapter.quote('options'),
         'category',
         'targetid',
         'createdat',

@@ -9,15 +9,16 @@
 select
     {{ dbt_utils.surrogate_key([
         '_id',
-        object_to_string('info'),
+        'info',
         adapter.quote('name'),
         adapter.quote('user'),
+        'email',
         'phone',
         adapter.quote('source'),
         array_to_string(adapter.quote('location')),
         'createdat',
         boolean_to_string('isdeleted'),
-        object_to_string('statistic'),
+        'statistic',
         'updatedat',
         'searchstring',
     ]) }} as _airbyte_customers_hashid,

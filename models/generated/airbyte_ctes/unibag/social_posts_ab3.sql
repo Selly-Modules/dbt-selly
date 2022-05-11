@@ -25,7 +25,7 @@ select
         array_to_string('products'),
         'createdat',
         boolean_to_string('hasupdate'),
-        object_to_string('statistic'),
+        'statistic',
         'updatedat',
         array_to_string('categories'),
         boolean_to_string('fromsystem'),
@@ -33,7 +33,7 @@ select
         'publishedat',
         'searchstring',
         'updatedcount',
-        object_to_string('sharestatistic'),
+        'sharestatistic',
         boolean_to_string('enablenotificationforcontributor'),
     ]) }} as _airbyte_social_posts_hashid,
     tmp.*

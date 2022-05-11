@@ -19,3 +19,4 @@ select
 from {{ ref('team_activities_ab3') }}
 -- team_activities from {{ source('unibag', '_airbyte_raw_team_activities') }}
 where 1 = 1
+

@@ -10,7 +10,7 @@ select
     cast(_id as {{ dbt_utils.type_string() }}) as _id,
     cast(team as {{ dbt_utils.type_string() }}) as team,
     cast({{ adapter.quote('action') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('action') }},
-    cast({{ adapter.quote('options') }} as {{ type_json() }}) as {{ adapter.quote('options') }},
+    cast({{ adapter.quote('options') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('options') }},
     cast(targetid as {{ dbt_utils.type_string() }}) as targetid,
     cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
     cast(createdby as {{ dbt_utils.type_string() }}) as createdby,

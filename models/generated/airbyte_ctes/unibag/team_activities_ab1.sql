@@ -10,7 +10,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['_id'], ['_id']) }} as _id,
     {{ json_extract_scalar('_airbyte_data', ['team'], ['team']) }} as team,
     {{ json_extract_scalar('_airbyte_data', ['action'], ['action']) }} as {{ adapter.quote('action') }},
-    {{ json_extract('table_alias', '_airbyte_data', ['options'], ['options']) }} as {{ adapter.quote('options') }},
+    {{ json_extract_scalar('_airbyte_data', ['options'], ['options']) }} as {{ adapter.quote('options') }},
     {{ json_extract_scalar('_airbyte_data', ['targetId'], ['targetId']) }} as targetid,
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,
     {{ json_extract_scalar('_airbyte_data', ['createdBy'], ['createdBy']) }} as createdby,
