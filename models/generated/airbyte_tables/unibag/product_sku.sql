@@ -11,6 +11,7 @@ select
     sku,
     {{ adapter.quote('name') }},
     active,
+    brand AS brand_id,
     -- quantity,
     picture AS photo,
     cast({{ adapter.quote('price') }}::json->>'base' AS numeric) AS price_base,
