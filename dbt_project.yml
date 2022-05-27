@@ -53,6 +53,10 @@ vars:
     admin_tags_ab2: unibag._airbyte_raw_admin_tags
     admin_tags_ab3: unibag._airbyte_raw_admin_tags
     admin_tags: unibag._airbyte_raw_admin_tags
+    brands_ab1: unibag._airbyte_raw_brands
+    brands_ab2: unibag._airbyte_raw_brands
+    brands_ab3: unibag._airbyte_raw_brands
+    brands: unibag._airbyte_raw_brands
     cash_flows_ab1: unibag._airbyte_raw_cash_flows
     cash_flows_ab2: unibag._airbyte_raw_cash_flows
     cash_flows_ab3: unibag._airbyte_raw_cash_flows
