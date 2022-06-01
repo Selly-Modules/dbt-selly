@@ -81,6 +81,10 @@ vars:
     events_ab2: unibag._airbyte_raw_events
     events_ab3: unibag._airbyte_raw_events
     events: unibag._airbyte_raw_events
+    give_gifts_ab1: unibag._airbyte_raw_give_gifts
+    give_gifts_ab2: unibag._airbyte_raw_give_gifts
+    give_gifts_ab3: unibag._airbyte_raw_give_gifts
+    give_gifts: unibag._airbyte_raw_give_gifts
     inventories_ab1: unibag._airbyte_raw_inventories
     inventories_ab2: unibag._airbyte_raw_inventories
     inventories_ab3: unibag._airbyte_raw_inventories
@@ -169,6 +173,10 @@ vars:
     team_bonus_ab2: unibag._airbyte_raw_team_bonus
     team_bonus_ab3: unibag._airbyte_raw_team_bonus
     team_bonus: unibag._airbyte_raw_team_bonus
+    team_histories_ab1: unibag._airbyte_raw_team_histories
+    team_histories_ab2: unibag._airbyte_raw_team_histories
+    team_histories_ab3: unibag._airbyte_raw_team_histories
+    team_histories: unibag._airbyte_raw_team_histories
     team_members_ab1: unibag._airbyte_raw_team_members
     team_members_ab2: unibag._airbyte_raw_team_members
     team_members_ab3: unibag._airbyte_raw_team_members
@@ -177,6 +185,14 @@ vars:
     teams_ab2: unibag._airbyte_raw_teams
     teams_ab3: unibag._airbyte_raw_teams
     teams: unibag._airbyte_raw_teams
+    user_courses_ab1: unibag._airbyte_raw_user_courses
+    user_courses_ab2: unibag._airbyte_raw_user_courses
+    user_courses_ab3: unibag._airbyte_raw_user_courses
+    user_courses: unibag._airbyte_raw_user_courses
+    user_give_gift_ab1: unibag._airbyte_raw_user_give_gift
+    user_give_gift_ab2: unibag._airbyte_raw_user_give_gift
+    user_give_gift_ab3: unibag._airbyte_raw_user_give_gift
+    user_give_gift: unibag._airbyte_raw_user_give_gift
     user_identifications_ab1: unibag._airbyte_raw_user_identifications
     user_identifications_ab2: unibag._airbyte_raw_user_identifications
     user_identifications_ab3: unibag._airbyte_raw_user_identifications

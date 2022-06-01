@@ -12,7 +12,7 @@ select
     team AS team_id,
     {{ adapter.quote('user') }} AS seller_id,
     isleft AS is_left,
-    leftat AS left_at,
+    leftat::timestamp AS left_at,
     joinedat::timestamp AS joined_at,
     createdat::timestamp AS created_at,
     updatedat::timestamp AS updated_at,

@@ -14,6 +14,7 @@ sources:
   - name: _airbyte_raw_districts
   - name: _airbyte_raw_event_rewards
   - name: _airbyte_raw_events
+  - name: _airbyte_raw_give_gifts
   - name: _airbyte_raw_inventories
   - name: _airbyte_raw_membership
   - name: _airbyte_raw_membership_histories
@@ -36,8 +37,11 @@ sources:
   - name: _airbyte_raw_suppliers
   - name: _airbyte_raw_team_activities
   - name: _airbyte_raw_team_bonus
+  - name: _airbyte_raw_team_histories
   - name: _airbyte_raw_team_members
   - name: _airbyte_raw_teams
+  - name: _airbyte_raw_user_courses
+  - name: _airbyte_raw_user_give_gift
   - name: _airbyte_raw_user_identifications
   - name: _airbyte_raw_users
   - name: _airbyte_raw_voucher_bonus
